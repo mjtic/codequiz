@@ -1,0 +1,40 @@
+/* :root {} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family? */
+}
+/* body */
+/* body {} */
+
+/* header  */
+#headboard {
+    margin-top: 2%;
+}
+
+#countdown {
+    text-align: right;
+}
+
+/* start-page */
+.start-wrapper{
+    align-items: center;
+    text-align: center;
+}
+.start-page {
+    text-align: center;
+    margin: 2%;
+}
+
+#intro {
+    text-align: center;
+    margin: 2%;
+}
+
+.btnStart {
+    padding-left: 1%;
+    padding-right: 1%;
+    
+}
