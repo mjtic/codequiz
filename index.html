@@ -1,46 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="./assets/reset.css">
-    <link rel="stylesheet" href="./assets/style.css">
-</head>
-    <body>
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <!-- header with timer and score -->
+    <header>
+      <div id="headboard">
+        <a id="scoreboard" href="./assets/highscore.html">View Highscore</a>
+        <h2 id="countdown"></h2>
+      </div>
+    </header>
 
-        <!-- header with timer and score -->
-        <header>
-            <div id="headboard">
-            View Highscore
-            <h2 id="countdown"></h2>
-            </div>
-        </header>
+    <!-- main -->
+    <main class="container">
+      <!-- start page -->
+      <div id="start-wrapper">
+        <h2 class="start-page">Coding Quiz Challege</h2>
+        <p id="intro">
+          Try to answer the following code related questions within the time
+          limit. Keep in mind that incorrect answers will penalize your
+          scoreTime by ten seconds!
+        </p>
+        <button class="btnStart" id="startBtn" type="submit">Start Quiz</button>
+      </div>
+      <!-- quiz page -->
+      <div id="quiz-container">
+        <div id="questions">
+          <div id="multiple-choices">
+            <ul>
+              <li>
+                <button
+                  type="button"
+                  class="option1"
+                  id="choice-1"
+                  onclick="check('1')"
+                ></button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="option2"
+                  id="choice-2"
+                  onclick="check('2')"
+                ></button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="option3"
+                  id="choice-3"
+                  onclick="check('3')"
+                ></button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="option4"
+                  id="choice-4"
+                  onclick="check('4')"
+                ></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- will need div id = quiz, div id = questions, div id = multiple-choice -->
 
-        <!-- main -->
-        <main class="container">
-            
-            <!-- start page -->
-            <div class="start-wrapper">
-                <h2 class="start-page">Coding Quiz Challege</h2>
-                    <p id="intro">Try to answer the following code related questions within 
-                    the time limit. Keep in mind that incorrect answers will 
-                    penalize your scoreTime by ten seconds!</p>
-                <button class="btnStart" id="startBtn" type="submit">Start Quiz</button>
-            </div>
+      <!-- will need div id = choiceCheck -->
 
-<!-- will need div id = quiz, div id = questions, div id = multiple-choice -->
+      <!-- will need last page to show: end message, final score result -->
 
-<!-- will need div id = choiceCheck -->
-
-<!-- will need last page to show: end message, final score result -->
-
-<!-- will need form to collect user info and submitBtn -->
-
-
-
-        </main>
-        <script src="./assets/script.js"></script>
-    </body>
+      <!-- will need form to collect user info and submitBtn -->
+    </main>
+    <script src="./assets/script.js"></script>
+  </body>
 </html>

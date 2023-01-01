@@ -10,16 +10,24 @@
 /* body {} */
 
 /* header  */
+
 #headboard {
-    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
 }
 
 #countdown {
-    text-align: right;
+   display: flex;
+}
+
+#scoreboard {
+    text-decoration: none;
 }
 
 /* start-page */
-.start-wrapper{
+
+#start-wrapper{
     align-items: center;
     text-align: center;
 }

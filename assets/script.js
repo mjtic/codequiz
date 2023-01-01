@@ -1,61 +1,50 @@
-// declare variables
+// need to declare variables
 
 // #headboard
-var headBoard = document.getElementById('headboard')
-
-
+var headBoard = document.getElementById("headboard");
+// #start page wrapper
+var startWrapper = document.getElementById("start-wrapper");
+// #start button
+var startBtn = document.getElementById("startBtn");
 // need id = quiz
+var quiz = document.getElementById("quiz-container");
+// need id = questions
+var questions = document.getElementById("questions");
 // need id = multiple-choice
+var choice = document.getElementById("multiple-choices");
 // need id = choice-1
+var choice1 = document.getElementById("choice-1");
 // need id = choice-2
+var choice2 = document.getElementById("choice-2");
 // need id = choice-3
+var choice3 = document.getElementById("choice-3");
 // need id = choice-4
+var choice4 = document.getElementById("choice-4");
+
 // need id = endMessage
 // need id = finalScore
 // need id = result
-// need it = score list? or score board?
+// need id = score list? or score board?
 
-// array of questions
-
-
-//
+// need array of questions
+var questions = [];
 
 // Pages : https://www.w3schools.com/jsref/prop_style_display.asp
-startPage.style.display = 'block';
-quizPage.style.display = 'none';
-finalPage.style.display = 'none';
+startWrapper.style.display = "block";
+// quizPage.style.display = 'none';
+// finalPage.style.display = 'none';
 
 // timer variables
+var countDown = document.getElementsByClassName("countdown"); // .countdown
 var timeLeft = 80; //availble time start
-var startScore = 0; //scorekeeping start
-var countDown = document.getElementsByClassName('countdown') // .countdown
+var timeStart = 0; //time start
 
-countDown.textContent = 'Time: ' + startScore + 's';
+// time textContent
+countdown.textContent = "Time: " + timeStart + "s";
 
-// gameStart
-
-
-
-// startBtn variable
-var startBtn = document.getElementById('startBtn')
-
-// eventListener to start the game
-startBtn.addEventListener('click', startGame);
-
-// quiz timer count-down
-var time = 80;
-var countDown = document.getElementById('countDown');
-
-countDown.textContent = 'Time: ' + 's';
-
-function countDown() {
-    var Time = 80;
-}
-
-
-
-
-
-
-
-
+//need to define variables - WIP
+//need array of questions - waiting to recieve info from class
+//need page display to still and change - worked on start page, quiz and result page WIP
+//need timer function, intervals - WIP
+//need prevent default,
+//need addEvenetLitsener

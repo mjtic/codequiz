@@ -1,0 +1,24 @@
+.highscoreWrap {
+display: flex;
+flex-direction: column;
+margin: 3%;
+}
+.headingHighScore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonGoBack {
+    display: flex;
+    justify-content: center;
+    margin: 1% 45%;
+}
+.buttonGoBack a {
+  text-decoration: none;
+}
+.buttonClrScore {
+  display: flex;
+  justify-content: center;
+  margin: 0 45%;
+}
+
