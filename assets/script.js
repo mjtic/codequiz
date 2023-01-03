@@ -92,3 +92,5 @@ var questions = [];
 //change to higihscore html
     //read values form local storage
     //append score values to page
+
+    //might need to use keyword this alot
