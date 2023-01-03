@@ -24,41 +24,96 @@ var choice4 = document.getElementById("choice-4");
 // need id = result
 // need id = score list? or score board?
 
-
-
 // #start button
 var startBtn = document.getElementById("startBtn");
 // add eventListener to startGame function by clciking startBtn
-startBtn.addEventListener("click", startGame)
+startBtn.addEventListener("click", startGame);
 
 // timer variables
-var countDown = document.getElementsByClassName("countdown"); // .countdown
+var timer = document.getElementById("countdown"); // #countdown
 var timeLeft = 80; //availble time start
 var timeStart = 0; //time start
 // time textContent
-countdown.textContent = "Time: " + timeStart + "s";
+timer.textContent = "Time: " + timeStart + "s";
 
 //timer function upon click startBtn
-function startTimer(){
-    let quizTime = setInterval(function(){
-        if (timeLeft > 0){
-            timeLeft = timeLeft -1;
-        }
-    })
+function startTimer() {
+  let quizTime = setInterval(function () {
+    if (timeLeft > 0) {
+      timeLeft = timeLeft - 1;
+      timer.textContent = "Time: " + timeLeft + "s";
+    } else {
+      clearInterval(quizTime);
+    }
+  }, 1000);
+}
+
+//startGame Function
+function startGame(event) {
+  event.preventDefault();
+  startTimer();
+  generateQuestions();
+}
+
+//start page
+// Pages : https://www.w3schools.com/jsref/prop_style_display.asp
+startWrapper.style.display = "block";
+quiz.style.display = "none";
+// finalPage.style.display = 'none';
+
+// need array of questions
+//user is presented with 5 questions - arrray of objects
+//format for questions???
+//Object that contains {question: stirng, Choices: array, answer: string}
+var questions = [
+  {
+    question: "Inside which HTML element do we put the JavaScript?:",
+    choice1: "1.: JS",
+    choice2: "2.: javascript",
+    choice3: "3.: scripting",
+    choice4: "4.: script",
+    correct: "4",
+  },
+  {
+    question: "Where is the correct place to insert a JavaScript?:",
+    choice1: "1.: <head> section",
+    choice2: "2.: <header>section",
+    choice3: "3.: <footer>section",
+    choice4: "4.: <body>section",
+    correct: "4",
+  },
+  {
+    question: "How do you call a function named myFunction?:",
+    choice1: "1.: call myFunction",
+    choice2: "2.: call function=myFunction",
+    choice3: "3.: call myfunction=()",
+    choice4: "4.: myFunction()",
+    correct: "4",
+  },
+  {
+    question: "How does a FOR loop start?:",
+    choice1: "1.: for i = 1 to 5",
+    choice2: "2.: for loop ()",
+    choice3: "3.: for (i = 0; i <= 5)",
+    choice4: "4.: for (i = 0; i <= 5; i++ )",
+    correct: "4",
+  },
+  {
+    question: "Which event occurs when the user clicks on an HTML element?:",
+    choice1: "1.: onmouse",
+    choice2: "2.: onmouseover",
+    choice3: "3.: onchange",
+    choice4: "4.: onclick",
+    correct: "4",
+  },
+];
+
+
+function generateQuestions (){
+    let 
 }
 
 
-
-// Pages : https://www.w3schools.com/jsref/prop_style_display.asp
-startWrapper.style.display = "block";
-// quizPage.style.display = 'none';
-// finalPage.style.display = 'none';
-
-
-
-
-// need array of questions
-var questions = [];
 
 //need to define variables - WIP
 //need array of questions - waiting to recieve info from class
@@ -67,30 +122,26 @@ var questions = [];
 //need prevent default,
 //need addEvenetLitsener
 
-
-
-
-
 //pseudo-code:
 
 //user is presented with 5 questions - arrray of objects
-    //format for questions???
-        //Object that contains {question: stirng, Choices: array, answer: string}
-        //Display questions - loop one by one 
-        //Append questions
-        //Append choices array
+//format for questions???
+//Object that contains {question: stirng, Choices: array, answer: string}
+//Display questions - loop one by one
+//Append questions
+//Append choices array
 
 // user selects an answer (button, radio, checkboxes) data-answer = ""
-    //click event is on the parent container (quiz or question wrapper)
-    //how to know which element was clicked(event.target)
-    //if the answer is correct display next question access array of questions object
-    //if answer is incorrect add 15 seconds to socre and display next question
+//click event is on the parent container (quiz or question wrapper)
+//how to know which element was clicked(event.target)
+//if the answer is correct display next question access array of questions object
+//if answer is incorrect add 15 seconds to socre and display next question
 
-    //when all questions are answered display form to submit initial
-    //save form values socre and initials to loca storage
+//when all questions are answered display form to submit initial
+//save form values socre and initials to loca storage
 
 //change to higihscore html
-    //read values form local storage
-    //append score values to page
+//read values form local storage
+//append score values to page
 
-    //might need to use keyword this alot
+//might need to use keyword this alot
