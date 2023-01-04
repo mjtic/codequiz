@@ -118,11 +118,19 @@ function resultDisplay() {
   scoreResult.style.display = "block";
 }
 
-function submitscore(){
-let initial = document.getElementById("initial").value;
-console.log(initial)
+function submitscore() {
+  let initial = document.getElementById("initial").value;
+
+  var newScore = {
+    result: totalCorrect,
+    initial: initial,
+  };
+  finalscores.push(newScore);
+  window.localStorage.setItem("finalscores", JSON.stringify(finalscores));
+  console.log(newScore);
 }
 
+var finalscores = JSON.parse(window.localStorage.getItem("fianlscores")) || [];
 //local storage capture total score
 // finalScore.addEventListener("click", function(event){
 //     event.preventDefault();
@@ -131,11 +139,7 @@ console.log(initial)
 
 // })
 
-
-
 // resultDisplay();
-
-
 
 // function displayResult() {
 
