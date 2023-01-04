@@ -25,7 +25,7 @@
         <p id="intro">
           Try to answer the following code related questions within the time
           limit. Keep in mind that incorrect answers will penalize your
-          scoreTime by ten seconds!
+          scoreTime by fifteen seconds!
         </p>
         <button class="btnStart" id="startBtn" type="submit">Start Quiz</button>
       </div>
@@ -68,13 +68,16 @@
             </li>
           </ul>
         </div>
-        <div id="feedBack"></div>
+        <div id="choiceCheck"></div>
       </div>
       <!-- will need div id = quiz, div id = questions, div id = multiple-choice -->
-
-
       <!-- will need div id = choiceCheck -->
-
+      <div id="scoreResult">
+        <h2>All Done!</h2>
+        <div id="result"></div>
+        <input type="text" id="initial" />
+        <button onclick="submitscore()">Submit</button>
+      </div>
       <!-- will need last page to show: end message, final score result -->
 
       <!-- will need form to collect user info and submitBtn -->

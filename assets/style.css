@@ -46,3 +46,7 @@
     padding-right: 1%;
     
 }
+
+#scoreResult{
+    display: none;
+}

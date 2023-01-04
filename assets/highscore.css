@@ -1,6 +1,4 @@
 .highscoreWrap {
-display: flex;
-flex-direction: column;
 margin: 3%;
 }
 .headingHighScore {
@@ -10,6 +8,7 @@ margin: 3%;
 }
 .buttonGoBack {
     display: flex;
+    flex-wrap: no-wrap;
     justify-content: center;
     margin: 1% 45%;
 }
@@ -18,6 +17,7 @@ margin: 3%;
 }
 .buttonClrScore {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   margin: 0 45%;
 }

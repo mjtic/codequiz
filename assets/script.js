@@ -7,7 +7,7 @@ var startWrapper = document.getElementById("start-wrapper");
 // need id = quiz
 var quiz = document.getElementById("quiz-container");
 // need id = questions
-var questions = document.getElementById("questions");
+var questionsEl = document.getElementById("questions");
 // need id = multiple-choice
 var choice = document.getElementById("multiple-choices");
 // need id = choice-1
@@ -18,7 +18,7 @@ var choice2 = document.getElementById("choice-2");
 var choice3 = document.getElementById("choice-3");
 // need id = choice-4
 var choice4 = document.getElementById("choice-4");
-
+var scoreresult = document.getElementById("scoreResult");
 // need id = endMessage
 // need id = finalScore
 // need id = result
@@ -70,17 +70,81 @@ function generateQuestions() {
 }
 
 var count = 0;
+var totalCorrect = 0;
 
 function displayQuestions() {
   if (count < questions.length) {
-    questions.textContent = questions[count].question;
+    questionsEl.textContent = questions[count].question;
     choice1.textContent = questions[count].choice1;
     choice2.textContent = questions[count].choice2;
     choice3.textContent = questions[count].choice3;
     choice4.textContent = questions[count].choice4;
   } else if (count == questions.length) {
+    displayResult();
   }
 }
+function displayResult() {
+  startWrapper.style.display = "none";
+  quiz.style.display = "none";
+  scoreresult.style.display = "block";
+  var result = document.getElementById("result");
+  result.textContent = "Your final socre is " + totalCorrect;
+}
+
+function goToNextQuestion() {
+  count++;
+  displayQuestions();
+}
+function check(event) {
+  console.log(event);
+  var choiceCheckEl = document.getElementById("choiceCheck");
+  if (event == questions[count].correct) {
+    console.log("correct");
+    choiceCheckEl.textContent = "correct";
+    totalCorrect++;
+  } else {
+    console.log("incorrect");
+    choiceCheckEl.textContent = "incorrect";
+    timeLeft -= 15;
+  }
+  goToNextQuestion();
+}
+
+var scoreResult = document.getElementById("scoreResult");
+
+function resultDisplay() {
+  startWrapper.style.display = "none";
+  quiz.style.display = "none";
+  scoreResult.style.display = "block";
+}
+
+function submitscore(){
+let initial = document.getElementById("initial").value;
+console.log(initial)
+}
+
+//local storage capture total score
+// finalScore.addEventListener("click", function(event){
+//     event.preventDefault();
+
+//     var highScoreInfo = document.getElementById()
+
+// })
+
+
+
+// resultDisplay();
+
+
+
+// function displayResult() {
+
+//     startWrapper.style.display = "none";
+//     quiz.style.display = "none";
+
+//     var result = document.getElementById("result");
+//     result.textContent = "Result: " + totalCorrect +
+// }
 
 // need array of questions
 //user is presented with 5 questions - arrray of objects
@@ -138,9 +202,9 @@ var questions = [
 
 //pseudo-code:
 
-//user is presented with 5 questions - arrray of objects
+//user is presented with 5 questions - arrray of objects = done
 //format for questions???
-//Object that contains {question: stirng, Choices: array, answer: string}
+//Object that contains {question: stirng, Choices: array, answer: string} = done but in diffrent format
 //Display questions - loop one by one
 //Append questions
 //Append choices array
