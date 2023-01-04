@@ -24,6 +24,12 @@ var choice4 = document.getElementById("choice-4");
 // need id = result
 // need id = score list? or score board?
 
+//start page
+// Pages : https://www.w3schools.com/jsref/prop_style_display.asp
+startWrapper.style.display = "block";
+quiz.style.display = "none";
+// finalPage.style.display = 'none';
+
 // #start button
 var startBtn = document.getElementById("startBtn");
 // add eventListener to startGame function by clciking startBtn
@@ -55,16 +61,31 @@ function startGame(event) {
   generateQuestions();
 }
 
-//start page
 // Pages : https://www.w3schools.com/jsref/prop_style_display.asp
-startWrapper.style.display = "block";
-quiz.style.display = "none";
-// finalPage.style.display = 'none';
+function generateQuestions() {
+  startWrapper.style.display = "none";
+  quiz.style.display = "block";
+  displayQuestions();
+  // finalPage.style.display = 'none';
+}
+
+var count = 0;
+
+function displayQuestions() {
+  if (count < questions.length) {
+    questions.textContent = questions[count].question;
+    choice1.textContent = questions[count].choice1;
+    choice2.textContent = questions[count].choice2;
+    choice3.textContent = questions[count].choice3;
+    choice4.textContent = questions[count].choice4;
+  } else if (count == questions.length) {
+  }
+}
 
 // need array of questions
 //user is presented with 5 questions - arrray of objects
 //format for questions???
-//Object that contains {question: stirng, Choices: array, answer: string}
+//Object that contains {question: stirng, Choices: array, answer: string} - didn't follow exactly
 var questions = [
   {
     question: "Inside which HTML element do we put the JavaScript?:",
@@ -107,13 +128,6 @@ var questions = [
     correct: "4",
   },
 ];
-
-
-function generateQuestions (){
-    let 
-}
-
-
 
 //need to define variables - WIP
 //need array of questions - waiting to recieve info from class
