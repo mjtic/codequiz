@@ -1,6 +1,8 @@
+/* highscore heading*/
 .highscoreWrap {
   margin: 3%;
 }
+/* heaidng for highscore page */
 .headingHighScore {
   display: flex;
   justify-content: center;
@@ -8,6 +10,7 @@
   font-size: xx-large;
 }
 
+/* color/size for buttons in highscore page */
 button {
   background-color: blueviolet;
   color: whitesmoke;
@@ -29,6 +32,7 @@ a {
   text-align: center;
 }
 
+/* styles for li on highscore page */
 #scorelist {
   display: flex;
   flex-direction: column;
