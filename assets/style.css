@@ -47,6 +47,25 @@
     
 }
 
+#quiz-container{
+border: solid black 10px;
+display: fle;
+}
+
+#questions{
+font-weight: bold;
+
+}
+
+button {
+    background-color: blueviolet;
+    color: whitesmoke;
+    border-radius: 10%;
+}
+
+
+
+
 #scoreResult{
     display: none;
 }
