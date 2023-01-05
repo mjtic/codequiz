@@ -5,22 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>High Score</title>
-    <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./highscore.css" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/highscore.css" />
   </head>
   <body>
     <!-- div id = highscore wrapper -->
     <div id="highscore-container" class="highscoreWrap">
       <h1 id="high-score" class="headingHighScore">High Scores</h1>
+    </div>
+    <div id="Btns">
       <button type="button" id="go-back" class="buttonGoBack">
-        <a href="../index.html">Go Back</a>
+        <a href="./index.html">Go Back</a>
       </button>
       <button type="button" id="clear-score" class="buttonClrScore">
         Clear Scores
       </button>
+      
     </div>
+    <ul id="scorelist"></ul>
+    <script>
+      var finalscores =
+        JSON.parse(window.localStorage.getItem("finalscores")) || [];
 
-    <script src="./script.js"></script>
+      finalscores.sort((a, b) => (a.result < b.result ? 1 : -1));
+      console.log(finalscores);
+
+      const scoreList = document.getElementById("scorelist");
+      for (let i = 0; i < finalscores.length; i++) {
+        var li = document.createElement("li");
+        li.textContent = finalscores[i].initial + ": " + finalscores[i].result;
+        scoreList.append(li);
+      }
+      const clearScoreBtn = document.getElementById("clear-score");
+      clearScoreBtn.addEventListener("click", clearScore);
+      function clearScore() {
+        scoreList.innerHTML = "";
+        window.localStorage.removeItem("finalscores");
+      }
+    </script>
     <!-- h1 id = high score  -->
     <!-- go back button -->
     <!-- clear score button -->

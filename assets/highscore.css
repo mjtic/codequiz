@@ -1,24 +1,38 @@
 .highscoreWrap {
-margin: 3%;
+  margin: 3%;
 }
 .headingHighScore {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.buttonGoBack {
-    display: flex;
-    flex-wrap: no-wrap;
-    justify-content: center;
-    margin: 1% 45%;
-}
-.buttonGoBack a {
-  text-decoration: none;
-}
-.buttonClrScore {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  margin: 0 45%;
+  font-size: xx-large;
 }
 
+button {
+  background-color: blueviolet;
+  color: whitesmoke;
+  border-radius: 10%;
+  font-size: x-large;
+  text-decoration: none;
+}
+
+
+#Btns{
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin: 2%;
+}
+a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+#scorelist {
+  display: flex;
+  flex-direction: column;
+  font-weight: bolder;
+  font-size: x-large;
+  text-align: center;
+}

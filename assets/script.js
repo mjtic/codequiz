@@ -19,7 +19,7 @@ var choice3 = document.getElementById("choice-3");
 // need id = choice-4
 var choice4 = document.getElementById("choice-4");
 var scoreresult = document.getElementById("scoreResult");
-var finalPage = document.getElementById("highscore-container")
+var finalPage = document.getElementById("highscore-container");
 // need id = endMessage
 // need id = finalScore
 // need id = result
@@ -29,7 +29,7 @@ var finalPage = document.getElementById("highscore-container")
 // Pages : https://www.w3schools.com/jsref/prop_style_display.asp
 startWrapper.style.display = "block";
 quiz.style.display = "none";
-finalPage.style.display = 'none';
+// finalPage.style.display = 'none';
 
 // #start button
 var startBtn = document.getElementById("startBtn");
@@ -66,7 +66,7 @@ function startGame(event) {
 function generateQuestions() {
   startWrapper.style.display = "none";
   quiz.style.display = "block";
-  finalPage.style.display = 'none';
+  // finalPage.style.display = 'none';
   displayQuestions();
 }
 
@@ -129,15 +129,13 @@ function submitscore() {
   finalscores.push(newScore);
   window.localStorage.setItem("finalscores", JSON.stringify(finalscores));
   console.log(newScore);
-  window.location = "./assets/highscore.html";
+  window.location = "../highscore.html";
   startWrapper.style.display = "none";
   quiz.style.display = "none";
-  scoreResult.style.display = "block";
-
-
+  // scoreResult.style.display = "block";
 }
 
-var finalscores = JSON.parse(window.localStorage.getItem("fianlscores")) || [];
+var finalscores = JSON.parse(window.localStorage.getItem("finalscores")) || [];
 
 //local storage capture total score
 // finalScore.addEventListener("click", function(event){
