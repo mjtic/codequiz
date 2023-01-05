@@ -21,8 +21,6 @@ var choice4 = document.getElementById("choice-4");
 // last page to submit player information
 var scoreresult = document.getElementById("scoreResult");
 
-
-
 //start page
 // Pages : https://www.w3schools.com/jsref/prop_style_display.asp
 startWrapper.style.display = "block";
@@ -66,7 +64,7 @@ function generateQuestions() {
   quiz.style.display = "block";
   displayQuestions();
 }
-// global variables 
+// global variables
 var count = 0;
 var totalCorrect = 0;
 
@@ -107,7 +105,7 @@ function check(event) {
   }
   goToNextQuestion();
 }
-// last page of the game 
+// last page of the game
 var scoreResult = document.getElementById("scoreResult");
 
 function resultDisplay() {

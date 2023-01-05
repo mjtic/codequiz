@@ -1,7 +1,7 @@
 # Code-Quiz
 
 ## Description:
-This was a scenerio to develop a coding assesment quiz mock quiz as part of an interview process to further improve the knowledge. This applicaiton is timed quiz with multiple choices stores and sorts users highest scores in local storage. This was the most challenging development experince thus far and will continue to improve to achieve clean, polished, and responsive user interface. 
+This was a scenerio to develop a coding assesment quiz to help prepare for job interviews, this application is a quiz with multiple choices, and displays users highest scores. It was the most challenging development experince thus far for me to write a code that consists of object, array, for loop, if statements, time intervals, set/get items and on. There was lots of frustrating moments yet found joys during the course of learning.  
 
 ## Table of Contents
 
@@ -19,11 +19,13 @@ This was a scenerio to develop a coding assesment quiz mock quiz as part of an i
 ![codequiz-webpage](./assets/scoreboard.png)
 
 ## Credits
+https://www.w3schools.com/jsref/prop_style_display.asp
+https://www.scaler.com/topics/javascript-sort-an-array-of-objects/
+https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
 
 ## License
 
 Please refer to the LICENSE in the repo.
-
 
 
 ## Mock-up##

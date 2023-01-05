@@ -32,10 +32,10 @@
       // get item access into local-storage; ("finalscres") has been saved to localstorage from main JS prior to page flip
       var finalscores =
         JSON.parse(window.localStorage.getItem("finalscores")) || [];
-      
-        // sorting the score results
-        // https://www.scaler.com/topics/javascript-sort-an-array-of-objects/
-        // https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
+
+      // sorting the score results
+      // https://www.scaler.com/topics/javascript-sort-an-array-of-objects/
+      // https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
       finalscores.sort((a, b) => (a.result < b.result ? 1 : -1));
       console.log(finalscores);
       // for loop to run the registered scores coming from main page
@@ -54,6 +54,5 @@
         window.localStorage.removeItem("finalscores");
       }
     </script>
-   
   </body>
 </html>
