@@ -129,7 +129,7 @@ function submitscore() {
   finalscores.push(newScore);
   window.localStorage.setItem("finalscores", JSON.stringify(finalscores));
   console.log(newScore);
-  window.location.replace("../highscore.html");
+  window.location.href = "../highscore.html";
   startWrapper.style.display = "none";
   quiz.style.display = "none";
   // scoreResult.style.display = "block";
