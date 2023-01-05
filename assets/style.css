@@ -1,26 +1,14 @@
-/* :root {} */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* font-family? */
-}
-/* body */
-/* body {} */
-
-/* header  */
-
+/* style for view highscore and timer */
 #headboard {
   display: flex;
   justify-content: space-between;
   margin: 2%;
 }
-
+/* timer */
 #countdown {
   display: flex;
 }
-
+/* highscore */
 #scoreboard {
   text-decoration: none;
   font-size: x-large;
@@ -28,7 +16,6 @@
 }
 
 /* start-page */
-
 #start-wrapper {
   align-items: center;
   text-align: center;
@@ -38,35 +25,35 @@
   margin: 2%;
   font-size: xx-large;
 }
-
+/* paragraph */
 #intro {
   text-align: center;
   font-size: x-large;
   margin: 2%;
 }
-
+/* start quiz button */
 .btnStart {
   padding-left: 1%;
   padding-right: 1%;
 }
-
+/* quiz wrapper */
 #quiz-container {
   display: flex;
   margin-left: 5%;
 }
-
+/* questions */
 #questions {
   font-weight: bold;
   font-size: x-large;
 }
-
+/* buttons in start page quiz page */
 button {
   background-color: blueviolet;
   color: whitesmoke;
   border-radius: 10%;
   font-size: x-large;
 }
-
+/* styles for correct/incorrect  */
 #choiceCheck {
   margin-top: 1%;
   border-top: solid whitesmoke;
@@ -74,7 +61,7 @@ button {
   font: bolder;
   font-style: italic;
 }
-
+/* submit score page */
 #scoreResult {
   display: none;
   align-items: center;

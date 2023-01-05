@@ -15,7 +15,7 @@ This was a scenerio to develop a coding assesment quiz mock quiz as part of an i
 - URL (https://mjtic.github.io/module4-codequiz/)
 
 ![codequiz-webpage](./assets/codequiz.png)
-![codequiz-webpage](./assets/timer%2Cquiz%2Cvalidation.png)
+![codequiz-webpage](./assets/timer%2Cquiz%2Cvalidation.png)  
 ![codequiz-webpage](./assets/scoreboard.png)
 
 ## Credits
