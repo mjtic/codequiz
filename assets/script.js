@@ -1,4 +1,4 @@
-// need to declare variables
+// declared variables
 
 // #headboard
 var headBoard = document.getElementById("headboard");
@@ -18,18 +18,15 @@ var choice2 = document.getElementById("choice-2");
 var choice3 = document.getElementById("choice-3");
 // need id = choice-4
 var choice4 = document.getElementById("choice-4");
+// last page to submit player information
 var scoreresult = document.getElementById("scoreResult");
-var finalPage = document.getElementById("highscore-container");
-// need id = endMessage
-// need id = finalScore
-// need id = result
-// need id = score list? or score board?
+
+
 
 //start page
 // Pages : https://www.w3schools.com/jsref/prop_style_display.asp
 startWrapper.style.display = "block";
 quiz.style.display = "none";
-// finalPage.style.display = 'none';
 
 // #start button
 var startBtn = document.getElementById("startBtn");
@@ -40,7 +37,7 @@ startBtn.addEventListener("click", startGame);
 var timer = document.getElementById("countdown"); // #countdown
 var timeLeft = 80; //availble time start
 var timeStart = 0; //time start
-// time textContent
+// time textContent in start page
 timer.textContent = "Time: " + timeStart + "s";
 
 //timer function upon click startBtn
@@ -63,16 +60,17 @@ function startGame(event) {
 }
 
 // Pages : https://www.w3schools.com/jsref/prop_style_display.asp
+// quiz page to display questions
 function generateQuestions() {
   startWrapper.style.display = "none";
   quiz.style.display = "block";
-  // finalPage.style.display = 'none';
   displayQuestions();
 }
-
+// global variables 
 var count = 0;
 var totalCorrect = 0;
 
+// if statement runs through questions and multiplechoices via [count] to show the question and choices and moves on to display result once complete
 function displayQuestions() {
   if (count < questions.length) {
     questionsEl.textContent = questions[count].question;
@@ -84,6 +82,7 @@ function displayQuestions() {
     displayResult();
   }
 }
+// displays the score and collect user information
 function displayResult() {
   startWrapper.style.display = "none";
   quiz.style.display = "none";
@@ -91,26 +90,24 @@ function displayResult() {
   var result = document.getElementById("result");
   result.textContent = "Your final socre is " + totalCorrect;
 }
-
+// count added move onto next quetions
 function goToNextQuestion() {
   count++;
   displayQuestions();
 }
+// if check(event) matches correct, adds totalCorrect, if not takes away 15 as penalty
 function check(event) {
-  console.log(event);
   var choiceCheckEl = document.getElementById("choiceCheck");
   if (event == questions[count].correct) {
-    console.log("correct");
     choiceCheckEl.textContent = "correct";
     totalCorrect++;
   } else {
-    console.log("incorrect");
     choiceCheckEl.textContent = "incorrect";
     timeLeft -= 15;
   }
   goToNextQuestion();
 }
-
+// last page of the game 
 var scoreResult = document.getElementById("scoreResult");
 
 function resultDisplay() {
@@ -118,7 +115,7 @@ function resultDisplay() {
   quiz.style.display = "none";
   scoreResult.style.display = "block";
 }
-
+// collect user information, set/get items and flip to highscore page
 function submitscore() {
   let initial = document.getElementById("initial").value;
 
@@ -128,38 +125,14 @@ function submitscore() {
   };
   finalscores.push(newScore);
   window.localStorage.setItem("finalscores", JSON.stringify(finalscores));
-  console.log(newScore);
   window.location.href = "./highscore.html";
   startWrapper.style.display = "none";
   quiz.style.display = "none";
-  // scoreResult.style.display = "block";
 }
 
 var finalscores = JSON.parse(window.localStorage.getItem("finalscores")) || [];
 
-//local storage capture total score
-// finalScore.addEventListener("click", function(event){
-//     event.preventDefault();
-
-//     var highScoreInfo = document.getElementById()
-
-// })
-
-// resultDisplay();
-
-// function displayResult() {
-
-//     startWrapper.style.display = "none";
-//     quiz.style.display = "none";
-
-//     var result = document.getElementById("result");
-//     result.textContent = "Result: " + totalCorrect +
-// }
-
-// need array of questions
-//user is presented with 5 questions - arrray of objects
-//format for questions???
-//Object that contains {question: stirng, Choices: array, answer: string} - didn't follow exactly
+// questions variable
 var questions = [
   {
     question: "Inside which HTML element do we put the JavaScript?:",
@@ -202,34 +175,3 @@ var questions = [
     correct: "4",
   },
 ];
-
-//need to define variables - WIP
-//need array of questions - waiting to recieve info from class
-//need page display to still and change - worked on start page, quiz and result page WIP
-//need timer function, intervals - WIP
-//need prevent default,
-//need addEvenetLitsener
-
-//pseudo-code:
-
-//user is presented with 5 questions - arrray of objects = done
-//format for questions???
-//Object that contains {question: stirng, Choices: array, answer: string} = done but in diffrent format
-//Display questions - loop one by one
-//Append questions
-//Append choices array
-
-// user selects an answer (button, radio, checkboxes) data-answer = ""
-//click event is on the parent container (quiz or question wrapper)
-//how to know which element was clicked(event.target)
-//if the answer is correct display next question access array of questions object
-//if answer is incorrect add 15 seconds to socre and display next question
-
-//when all questions are answered display form to submit initial
-//save form values socre and initials to loca storage
-
-//change to higihscore html
-//read values form local storage
-//append score values to page
-
-//might need to use keyword this alot

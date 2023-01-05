@@ -29,7 +29,7 @@
     <!-- initial plan was to keep all JS under main JS, ran into issue created separate JS page for highscore and fianlly, decided to put throw this in here to keep it simple -->
     <ul id="scorelist"></ul>
     <script>
-      // get item access into local-storage
+      // get item access into local-storage; ("finalscres") has been saved to localstorage from main JS prior to page flip
       var finalscores =
         JSON.parse(window.localStorage.getItem("finalscores")) || [];
       
@@ -38,13 +38,15 @@
         // https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
       finalscores.sort((a, b) => (a.result < b.result ? 1 : -1));
       console.log(finalscores);
-      
+      // for loop to run the registered scores coming from main page
+      // also creates and adds "li" each time
       const scoreList = document.getElementById("scorelist");
       for (let i = 0; i < finalscores.length; i++) {
         var li = document.createElement("li");
         li.textContent = finalscores[i].initial + ": " + finalscores[i].result;
         scoreList.append(li);
       }
+      // click eventLitsener to remove "finalscores" list
       const clearScoreBtn = document.getElementById("clear-score");
       clearScoreBtn.addEventListener("click", clearScore);
       function clearScore() {
