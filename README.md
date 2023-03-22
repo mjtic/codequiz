@@ -1,7 +1,12 @@
 # Code-Quiz
 
 ## Description:
-This was a scenerio to develop a coding assesment quiz to help prepare for job interviews, this application is a quiz with multiple choices, and displays users highest scores. It was the most challenging development experince thus far for me to write a code that consists of object, array, for loop, if statements, time intervals, set/get items and on. There was lots of frustrating moments yet found joys during the course of learning.  
+This is an coding assesment quiz application to help prepare for job interviews, this application is a quiz with multiple choices, and displays users highest scores. It was the most challenging development experince thus far for me to write a code that consists of object, array, for loop, if statements, time intervals, set/get items and on. There was lots of frustrating moments yet found joys during the course of learning.  
+
+## Tools
+- HTML
+- CSS
+- JAVASCRIPT
 
 ## Table of Contents
 
@@ -12,7 +17,7 @@ This was a scenerio to develop a coding assesment quiz to help prepare for job i
 
 ## Usage
 - Github page (https://github.com/mjtic/module4-codequiz/)
-- URL (https://mjtic.github.io/module4-codequiz/)
+- URL (https://mjtic.github.io/codequiz/)
 
 ![codequiz-webpage](./assets/codequiz.png)
 ![codequiz-webpage](./assets/timer%2Cquiz%2Cvalidation.png)  
