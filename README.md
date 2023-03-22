@@ -33,4 +33,3 @@ https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-prop
 Please refer to the LICENSE in the repo.
 
 
-## Mock-up##
